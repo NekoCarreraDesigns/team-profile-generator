@@ -1,7 +1,7 @@
 {
   "name": "team-profile-generator",
   "version": "1.0.0",
-  "description": "Prfile Generator",
+  "description": "Profile generator for node.js CLI",
   "main": "app.js",
   "directories": {
     "lib": "lib",
@@ -13,16 +13,16 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "Employee.test.js, Engineer.test.js, Manager.test.js, Intern.test.js"
+    "test": "npm run test"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/NekoCarreraDesigns/team-profile-generator.git"
   },
   "keywords": [
+    "Team",
     "Profile",
-    "Generator",
-    "Team"
+    "Generator"
   ],
   "author": "Neko Carrera",
   "license": "ISC",
