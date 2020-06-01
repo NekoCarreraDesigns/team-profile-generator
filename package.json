@@ -1,0 +1,33 @@
+{
+  "name": "team-profile-generator",
+  "version": "1.0.0",
+  "description": "Profile generator",
+  "main": "app.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "dependencies": {
+    "inquirer": "^7.1.0",
+    "jest": "^26.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NekoCarreraDesigns/team-profile-generator.git"
+  },
+  "keywords": [
+    "Generator",
+    "Profile",
+    "Team"
+  ],
+  "author": "Neko Carrera",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NekoCarreraDesigns/team-profile-generator/issues"
+  },
+  "homepage": "https://github.com/NekoCarreraDesigns/team-profile-generator#readme"
+}
