@@ -1,89 +1,74 @@
-// const Employee = require("./lib/Employee");
-// const Manager = require("./lib/Manager");
-// const Engineer = require("./lib/Engineer");
-// const Intern = require("./lib/Intern");
+const Employee = require("./lib/Employee");
+const Manager = require("./lib/Manager");
+const Engineer = require("./lib/Engineer");
+const Intern = require("./lib/Intern");
 const inquirer = require("inquirer");
-//const path = require("path");
-// const fs = require("fs");
+const path = require("path");
+const fs = require("fs");
 
 // const OUTPUT_DIR = path.resolve(__dirname, "output");
 // const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 // const render = require("./output/htmlRenderer");
 
+const employeeData = [];
+
 inquirer.prompt([{
 
     type: "input",
-    name: "teammate",
+    name: "name",
     message: "What is your name?"
 },
 {
     type: "input",
-    name: "position",
-    message: "What is your position??"
+    name: "role",
+    message: "What is your role?"
+},
+{
+    type: "input",
+    name: "id",
+    message: "What is your id?"
+},
+{
+    type: "input",
+    name: "email",
+    message: "What is your email?"
+},
+{
+    type: "input",
+    name: "officeNumber",
+    message: "what is your office number?"
+},
+{
+    type: "list",
+    name: "employees",
+    message: "Would you like to add more employees?",
+    choices: [
+        "yes",
+        "no"
+    ]
 
-
-},
-{
-    type: "input",
-    name: "teammate1",
-    message: "What is your first team members name?"
-},
-{
-    type: "input",
-    name: "position1",
-    message: "What is your first team members position?"
-},
-{
-    type: "input",
-    name: "teammate2",
-    message: "What is your second team members name?"
-},
-{
-    type: "input",
-    name: "position2",
-    message: "What is your second team members position?"
-},
-{
-    type: "input",
-    name: "teammate3",
-    message: "What is your third team members name?"
-},
-{
-    type: "input",
-    name: "position3",
-    message: "What is your third team members position?"
-},
-{
-    type: "input",
-    name: "teammate4",
-    message: "What is your fourth team members name?"
-},
-{
-    type: "input",
-    name: "position4",
-    message: "What is your fourth team members position?"
 },
 
+]).then((res) => {
+    const managerData = new Manager("res.name, res.id, res.role, res.officeNumber, res.email")
+    employeeData.push(managerData)
 
+    if (res.employees === "yes") {
+        inquirer.prompt([{
+            type: "list",
+            name: "employee",
+            message: "What is the employees position?",
+            choices: [
+                "Engineer",
+                "Intern"
+            ]
 
-])
-const positionQuestion = {
-    type: "input",
-    message: "What is their github username?",
-    name: "positionQuestion",
-    when: function (position1, position2, position3, position4) {
-        positionQuestion === engineer
+        }])
+    } else {
+
     }
-}
-const positionQuestion1 = {
-    type: "input",
-    message: "What school do they attend?",
-    name: "positionQuestion1",
-    when: function (position1, position2, position3, position4) {
-        position1 === intern
-        position2 === intern
-        position3 === intern
-        position4 === intern
-    }
-}
+
+
+
+})
