@@ -13,6 +13,7 @@ const render = require("./output/htmlRenderer");
 
 const employeeData = [];
 
+
 inquirer.prompt([{
 
     type: "input",
@@ -68,6 +69,10 @@ inquirer.prompt([{
     } else {
 
     }
+    const Employee = new Employee(`res.name, res.email, res.role, res.id`)
+    employeeData.push(employeeData)
+    const Engineer = new Engineer(`res.github, ${employee}`)
+    const Intern = new Intern(`res.school, ${employee}`)
 
 
 
