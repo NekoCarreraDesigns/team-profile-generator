@@ -66,14 +66,26 @@ inquirer.prompt([{
             ]
 
         }])
-    } else {
-
+    } else if (res.employees === "Intern") {
+        inquirer.prompt([{
+            type: "input",
+            name: "intern",
+            message: "What school do they attend?"
+        }])
+    } else if (res.employee === "Engineer") {
+        inquirer.prompt([{
+            type: "input",
+            name: "engineer",
+            message: "What is their github username?"
+        }])
     }
-    const Employee = new Employee(`res.name, res.email, res.role, res.id`)
-    employeeData.push(employeeData)
-    const Engineer = new Engineer(`res.github, ${employee}`)
-    const Intern = new Intern(`res.school, ${employee}`)
 
+    const employee = new Employee(`res.name, res.email, res.role, res.id`)
+    employeeData.push(employeeData)
+    const engineer = new Engineer(`res.github, ${employee}`)
+    employeeData.push(engineer)
+    const intern = new Intern(`res.school, ${employee}`)
+    employeeData.push(intern)
 
 
 })
