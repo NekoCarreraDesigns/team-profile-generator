@@ -78,6 +78,9 @@ inquirer.prompt([{
             name: "engineer",
             message: "What is their github username?"
         }])
+    } else {
+        alert("Not a fan of teamwork")
+        console.log(alert)
     }
 
     const employee = new Employee(`res.name, res.email, res.role, res.id`)
@@ -88,4 +91,11 @@ inquirer.prompt([{
     employeeData.push(intern)
 
 
+})
+
+fs.writeFile("team.html", "utf-8", (err) => {
+    if (err) {
+        throw err
+    }
+    console.log(err)
 })
