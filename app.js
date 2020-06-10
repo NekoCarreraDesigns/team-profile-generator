@@ -2,7 +2,7 @@
 const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
-//const inquirer = require("inquirer");
+const inquirer = require("inquirer");
 const path = require("path");
 const fs = require("fs");
 
@@ -16,7 +16,7 @@ let employeeData = [];
 let html;
 const managerPrompt = async () => {
     try {
-        const { name, id, email, officeNumber } = await prompt([
+        const { name, id, email, officeNumber } = await inquirer.prompt([
             {
                 type: "input",
                 name: "name",
@@ -45,7 +45,7 @@ const managerPrompt = async () => {
 };
 const internPrompt = async () => {
     try {
-        const { name, id, email, school } = await prompt([
+        const { name, id, email, school } = await inquirer.prompt([
             {
                 type: "input",
                 name: "name",
@@ -75,7 +75,7 @@ const internPrompt = async () => {
 
 const engineerPrompt = async () => {
     try {
-        const { name, id, email, github } = await prompt([
+        const { name, id, email, github } = await inquirer.prompt([
             {
                 type: "input",
                 name: "name",
@@ -106,7 +106,7 @@ const engineerPrompt = async () => {
 
 const mainPrompt = async () => {
     try {
-        const { next } = await prompt([
+        const { next } = await inquirer.prompt([
             {
                 name: "next",
                 message: "What team member would you like to add?:",
