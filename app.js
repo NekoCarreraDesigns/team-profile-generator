@@ -117,8 +117,8 @@ const mainPrompt = async () => {
 
         switch (next) {
             case "I'm finished":
-                console.log(employees);
-                html = render(employees);
+                console.log(employeeData);
+                html = render(employeeData);
                 return;
             case "Manager":
                 await managerPrompt();
