@@ -111,7 +111,7 @@ const mainPrompt = async () => {
                 name: "next",
                 message: "What team member would you like to add?:",
                 type: "list",
-                choices: ["Intern", "Engineer", "I'm finished"],
+                choices: ["Intern", "Engineer", "Manager", "I'm finished"],
             },
         ]);
 
@@ -119,6 +119,10 @@ const mainPrompt = async () => {
             case "I'm finished":
                 console.log(employees);
                 html = render(employees);
+                return;
+            case "Manager":
+                await managerPrompt();
+                await mainPrompt();
                 return;
             case "Intern":
                 await internPrompt();
